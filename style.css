@@ -1,0 +1,71 @@
+/**
+ * Theme Name:        Jcr Theme
+ * Theme URI:         https://github.com/CHOONGRAE/wp-jcr-theme.git
+ * Author:            Jeong ChoongRae
+ * Author URI:        https://jcrcode.com
+ * Description:       This is custom theme for my blog
+ * Version:           0.1.0
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  color: #242424;
+}
+
+main {
+  width: calc(100vw - 17px);
+  padding-top: 110px;
+  padding-bottom: 75px;
+  position: relative;
+}
+
+a,
+a:visited,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #a07bbe;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.fs12 {
+  font-size: 12px;
+}
+
+.fs15 {
+  font-size: 15px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.fs22 {
+  font-size: 22px;
+}
+
+.fs24 {
+  font-size: 24px;
+}
+
+.fs30 {
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: bold;
+}
