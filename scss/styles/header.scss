@@ -1,0 +1,147 @@
+body {
+  &.home,
+  &.archive,
+  &.actegory,
+  &.search,
+  &.single {
+    #Nav li.menu-item-home > a {
+      font-weight: bold;
+      color: #a07bbe;
+    }
+  }
+}
+
+#Site-header {
+  position: fixed;
+  width: calc(100vw - 5px);
+  height: 110px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.5)
+  );
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  text-align: center;
+
+  .page-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .category {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+
+    span {
+      opacity: 0.45;
+    }
+  }
+
+  .title {
+    margin: 0;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 100%;
+  }
+
+  .author.date {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+
+    .date {
+      opacity: 0.45;
+    }
+  }
+}
+
+#Nav {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+
+  .btn-open-sidebar {
+    width: 30px;
+    height: 40px;
+    position: relative;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+
+    div {
+      width: calc(100% - 4px);
+      height: 1px;
+      background: #ccc;
+      border: 2px solid #ccc;
+      border-radius: 1px;
+
+      &.short {
+        width: calc(300% / 4 - 2px);
+      }
+    }
+  }
+
+  .site-menu {
+    width: calc(100% - 30px);
+    height: 34px;
+    position: relative;
+    top: calc(100% - 34px);
+
+    ul {
+      margin: 0;
+      padding: 0;
+      float: right;
+      z-index: 2;
+
+      &.menu {
+        position: relative;
+        top: 5px;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: table;
+      }
+
+      &::after {
+        clear: both;
+      }
+
+      li {
+        list-style: none;
+        display: table-cell;
+
+        a {
+          padding: 5px 3px;
+          margin-left: 4px;
+
+          &:not(.current-menu-item > a) {
+            color: inherit;
+          }
+
+          &:is(.current-menu-item > a) {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
