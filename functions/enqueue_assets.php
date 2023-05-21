@@ -16,5 +16,6 @@ function my_theme_assets()
   ) {
     wp_enqueue_style("header", get_theme_file_uri("/styles/header.css"));
     wp_enqueue_style("footer", get_theme_file_uri("/styles/footer.css"));
+    wp_enqueue_style("sidebar", get_theme_file_uri("/styles/sidebar.css"));
   }
 }

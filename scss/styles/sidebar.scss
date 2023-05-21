@@ -1,0 +1,161 @@
+#Sidebar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #0000;
+  z-index: 100;
+  display: none;
+  transition: all 0.2s ease-in-out;
+
+  & > * {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &.open {
+    background-color: #0009;
+
+    & > * {
+      opacity: 1;
+    }
+  }
+
+  .btn-close-sidebar {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .sidebar-items {
+    display: inline-block;
+    margin-top: 110px;
+    margin-left: 20px;
+    max-width: calc(100% - 40px);
+    min-height: 100vh;
+
+    & > * {
+      margin-bottom: 15px;
+    }
+  }
+
+  #Searchform {
+    border: 1px solid #bbb;
+    background: #444;
+    padding: 10px;
+    box-shadow: 0 0 5px #eee;
+    max-width: 100%;
+
+    svg {
+      vertical-align: top;
+    }
+
+    input {
+      all: unset;
+      line-height: 25px;
+      color: #eee;
+      padding-left: 10px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .categories {
+    max-width: 100%;
+
+    * {
+      vertical-align: top;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      list-style: none;
+
+      &:not(.curr) > a {
+        color: inherit;
+      }
+
+      &.curr > a {
+        font-weight: bold;
+      }
+
+      .item {
+        cursor: pointer;
+        background: #eee;
+        line-height: 25px;
+        padding: 10px;
+        border: 1px solid #bbb;
+        border-radius: 3px;
+        display: grid;
+        grid-template-columns: 25px auto;
+        box-shadow: 0 0 5px #eee;
+
+        p:not(.all) {
+          padding-left: 10px;
+        }
+      }
+
+      &.have-sub-cat {
+        & > .sub-cat {
+          width: calc(100% - 15px);
+          margin-left: 15px;
+
+          & > li > a {
+            display: none;
+            overflow-y: hidden;
+            height: 0;
+            transition: height 0.2s ease-in-out;
+          }
+        }
+
+        & > a {
+          .item {
+            grid-template-columns: 25px auto 80px;
+
+            .state {
+              position: relative;
+
+              svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: rotate(-90deg);
+                opacity: 1;
+                transition: all 0.2s ease-in-out;
+              }
+            }
+          }
+
+          .all {
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        &.open {
+          & > .sub-cat > li > a {
+            display: none;
+            overflow-y: hidden;
+            height: 0;
+            transition: height 0.2s ease-in-out;
+          }
+
+          & > a {
+            .item .state svg {
+              opacity: 0;
+            }
+
+            .all {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
