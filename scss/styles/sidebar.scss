@@ -139,10 +139,8 @@
 
         &.open {
           & > .sub-cat > li > a {
-            display: none;
-            overflow-y: hidden;
-            height: 0;
-            transition: height 0.2s ease-in-out;
+            display: block;
+            box-shadow: 0 0 5px #eee;
           }
 
           & > a {
