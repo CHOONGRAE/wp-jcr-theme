@@ -14,4 +14,7 @@ function remove_admin_bar()
 }
 
 //이미지 업로드 처리
-include "functions/proc_img.php";
+include_once "functions/proc_img.php";
+
+// 파일 첨부
+include_once "functions/enqueue_assets.php";
