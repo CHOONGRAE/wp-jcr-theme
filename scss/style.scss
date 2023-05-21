@@ -96,7 +96,6 @@ video {
 }
 
 body {
-  margin: 0 auto;
   width: 100%;
   min-height: 100vh;
   font-family: "Noto Sans KR", sans-serif;
@@ -107,7 +106,7 @@ body {
 }
 
 main {
-  width: calc(100vw - 17px);
+  width: calc(100vw - 5px);
   padding-top: 110px;
   padding-bottom: 75px;
   position: relative;
