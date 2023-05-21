@@ -12,3 +12,6 @@ function remove_admin_bar()
   //   show_admin_bar(false);
   // }
 }
+
+//이미지 업로드 처리
+include "functions/proc_img.php";
