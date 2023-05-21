@@ -1,4 +1,4 @@
-section {
+main section {
   max-width: 675px;
   width: calc(100% - 40px);
   margin: 0 auto;
@@ -38,7 +38,7 @@ section {
       overflow: hidden;
       border-radius: 5px;
       position: relative;
-      top: -39px;
+      top: -34px;
       margin-left: 15px;
       background-image: radial-gradient(
         rgba(0, 0, 0, 0.05),
