@@ -15,5 +15,6 @@ function my_theme_assets()
     is_single()
   ) {
     wp_enqueue_style("header", get_theme_file_uri("/styles/header.css"));
+    wp_enqueue_style("footer", get_theme_file_uri("/styles/footer.css"));
   }
 }
