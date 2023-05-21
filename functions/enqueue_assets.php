@@ -35,5 +35,9 @@ function my_theme_assets()
     if (is_home()) {
       wp_enqueue_style("home", get_theme_file_uri("/styles/home.css"));
     }
+
+    if (is_search()) {
+      wp_enqueue_style("search", get_theme_file_uri("/styles/search.css"));
+    }
   }
 }
