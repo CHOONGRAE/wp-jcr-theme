@@ -1,4 +1,15 @@
 <?php
+//change script type
+add_filter("script_loader_tag", "change_type_attribute", 10, 3);
+
+function change_type_attribute($tag, $handle, $src)
+{
+  $type = wp_scripts()->get_data($handle, "type");
+  if ($type && is_string($type)) {
+    $tag = preg_replace("/type='.{0,50}'\s/", "type='" . $type . "' ", $tag);
+  }
+  return $tag;
+}
 
 //enqueue assets
 add_action("wp_enqueue_scripts", "my_theme_assets");
