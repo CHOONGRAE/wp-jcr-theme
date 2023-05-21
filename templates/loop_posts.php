@@ -41,22 +41,24 @@
 
     <?php $cnt += 1;
     }
+    ?>
+</section>
 
-    if (empty($className) && empty($listTitle)) {
-      $paged = get_query_var("paged") ? get_query_var("paged") : 1;
-      $links = paginate_links([
-        "prev_text" => __("< Prev"),
-        "next_text" => __("Next >"),
-        "current" => $paged,
-      ]);
+<?php if (empty($className) && empty($listTitle)) {
+  $paged = get_query_var("paged") ? get_query_var("paged") : 1;
+  $links = paginate_links([
+    "prev_text" => __("< Prev"),
+    "next_text" => __("Next >"),
+    "current" => $paged,
+  ]);
 
-      if ($links) { ?>
-    <nav class="pagination">
+  if ($links) { ?>
+
+<section id='Pagination'>
+    <nav>
         <?php echo $links; ?>
     </nav>
-
-    <?php }
-    }
-    ?>
-
 </section>
+
+<?php }
+} ?>
