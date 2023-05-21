@@ -22,7 +22,7 @@
             </h1>
             <?php }
             if (is_category() || is_search()) { ?>
-            <h1 class='title'>
+            <h1 class='title fs24'>
                 <span class="deco fs18"><?php echo $args["type"]; ?> - </span>
                 <?php echo $args["name"]; ?>
                 <span class="deco fs18">[ <?php echo $args["cnt"]; ?> ]</span>
@@ -30,7 +30,7 @@
             <?php }
             if (is_single()) { ?>
             <p class="category fs15 bold"><?php echo $args["cat"]; ?></p>
-            <h1 class="title fs30"><?php echo $args["title"]; ?></h1>
+            <h1 class="title fs24"><?php echo $args["title"]; ?></h1>
             <p class="author date">
                 <?php echo $args["avatar"]; ?>
                 <span class="author fs18"><?php echo $args["author"]; ?></span>
