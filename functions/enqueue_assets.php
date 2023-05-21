@@ -31,5 +31,9 @@ function my_theme_assets()
 
     wp_enqueue_script("sidebar", get_theme_file_uri("/js/sidebar.js"));
     wp_scripts()->add_data("sidebar", "type", "module");
+
+    if (is_home()) {
+      wp_enqueue_style("home", get_theme_file_uri("/styles/home.css"));
+    }
   }
 }
