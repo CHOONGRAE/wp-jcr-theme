@@ -57,7 +57,13 @@ body {
     left: 0;
     width: 100%;
 
+    img,
+    .author {
+      vertical-align: top;
+    }
+
     .date {
+      vertical-align: bottom;
       opacity: 0.45;
     }
   }
