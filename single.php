@@ -2,7 +2,7 @@
 
 $wp_query->the_post();
 
-$cat = get_the_category_list("<span class='separator'> / </span>", "mutiple");
+$cat = get_the_category_list("<span class='separator'> / </span>", "multiple");
 $title = get_the_title();
 $date = get_the_date("Y. n. j");
 $author = get_the_author();
