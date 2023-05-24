@@ -1,0 +1,100 @@
+main section {
+  max-width: 675px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+#List {
+  .post {
+    height: 120px;
+    margin-top: 30px;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+
+    .category span {
+      opacity: 0.45;
+    }
+
+    .date {
+      margin-left: 10px;
+      opacity: 0.45;
+    }
+
+    .post-thumb {
+      float: right;
+      width: 150px;
+      height: 130px;
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+      top: -34px;
+      margin-left: 15px;
+      background-image: radial-gradient(
+        rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.25)
+      );
+
+      p {
+        line-height: 130px;
+        text-align: center;
+        color: #9550cc;
+      }
+
+      img {
+        position: absolute;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .post-summary {
+      color: #242424;
+      h3,
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 5px 0 15px 5px;
+      }
+
+      p {
+        -webkit-line-clamp: 2;
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+#Pagination nav {
+  margin-top: 35px;
+  text-align: center;
+  position: relative;
+
+  .prev {
+    position: absolute;
+    left: 0;
+  }
+
+  .next {
+    position: absolute;
+    right: 0;
+  }
+
+  & > * {
+    font-size: 15px;
+    opacity: 0.45;
+    margin: 0 4px;
+    color: #242424;
+  }
+
+  .current {
+    opacity: 1;
+    font-weight: bold;
+  }
+}
