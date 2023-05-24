@@ -43,5 +43,9 @@ function my_theme_assets()
     if (is_category()) {
       wp_enqueue_style("category", get_theme_file_uri("/styles/category.css"));
     }
+
+    if (is_single()) {
+      wp_enqueue_style("single", get_theme_file_uri("/styles/single.css"));
+    }
   }
 }
